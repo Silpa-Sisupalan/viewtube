@@ -1,0 +1,424 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, .2fr));
+    gap: 2rem;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+button {
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid gray;
+    height: 40px;
+    margin-right: 20px;
+    text-overflow: scroll;
+    color: whitesmoke;
+    white-space: nowrap;
+}
+
+
+/*
+👇 just to make this demo beautiful for you
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 2rem;
+    background-size: cover;
+    font-family: 'Flow Circular', cursive;
+    background-repeat: no-repeat;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+article {
+    --gray: rgb(255, 255, 255);
+    padding: 1rem;
+    background-color: #1a1a1d;
+    border-radius: 10px;
+    box-shadow: 0.3px 0.5px 0.7px rgba(46, 45, 44, 0.36), 0.8px 1.6px 2px -0.8px rgba(38, 37, 37, 0.36), 2.1px 4.1px 5.2px -1.7px rgba(49, 49, 48, 0.36), 5px 10px 12.6px -2.5px rgba(0, 0, 0, 0.36);
+}
+
+.image {
+    aspect-ratio: 4/3;
+    background-color: #1a1a1d;
+    pointer-events: none;
+}
+
+.categories button:hover {
+    margin-top: 10px;
+    transform: scale(1.05);
+    border-color: #c3073f;
+}
+
+article button {
+    pointer-events: none;
+}
+
+.categories {
+    overflow: hidden;
+    overflow-x: scroll;
+    position: relative;
+    display: flex;
+    padding: 12px;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    height: 20px;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    height: 100%;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #1a1a1d;
+    width: 10px;
+    border-radius: 10px;
+}
+
+
+/* Up */
+
+::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent blue transparent;
+    background-image: url("http://images1.wikia.nocookie.net/__cb20081213193550/mariokartwii/images/thumb/0/0d/Red_Arrow_Left.svg/480px-Red_Arrow_Left.svg.png");
+    background-size: contain;
+}
+
+
+/* Down */
+
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("https://www.pinclipart.com/picdir/big/1-16415_download-red-arrow-right-png-clipart-arrow-clip.png");
+    background-size: contain;
+}
+
+li :hover {
+    padding: 1rem;
+    color: var(--gray);
+    box-shadow: 0.3px 0.5px 0.7px rgba(46, 45, 44, 0.36), 0.8px 1.6px 2px -0.8px rgba(38, 37, 37, 0.36), 2.1px 4.1px 5.2px -1.7px rgba(49, 49, 48, 0.36), 5px 10px 12.6px -2.5px rgba(0, 0, 0, 0.36);
+    transform: scale(1.1);
+    transition-timing-function: 5s;
+}
+
+li :hover button {
+    border-color: #c3073f;
+    color: #c3073f;
+}
+
+img {
+    width: 100%;
+    height: 101%;
+    pointer-events: none;
+}
+
+h2,
+p {
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+    text-overflow: scroll;
+    font-size: 16px;
+    pointer-events: none;
+    color: white;
+}
+
+nav:focus {
+    color: #03e9f4,
+}
+
+nav:hover {
+    background-size: 100% 100%;
+    background-position-x: 200%;
+}
+
+nav h1::selection {
+    color: black;
+    background-color: white;
+}
+
+nav h1 {
+    color: white;
+    padding: 0 0;
+    filter: drop-shadow(0px 0px 2px black);
+    transition-delay: 1.8s;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+nav h1:hover {
+    color: #03e9f4;
+}
+
+nav .links {
+    padding: 0 20px;
+}
+
+nav .links a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(0px 0px 2px black);
+}
+
+nav .links .fas {
+    display: none;
+    color: white;
+    filter: drop-shadow(0px 0px 2px black);
+    font-size: 1.3em;
+}
+
+nav .links .fas:hover {
+    color: black;
+}
+
+.link-active {
+    font-weight: bold;
+    font: size 20px;
+    border-bottom: 2px solid;
+    border-color: #03e9f4;
+    transition: all .25s;
+}
+
+#circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    backdrop-filter: invert(1);
+    pointer-events: none;
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+
+header {
+    cursor: crosshair;
+    background-color: rgb(97, 8, 8);
+    margin: -10px;
+}
+
+nav {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(95deg, #c3073f, #641e33);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition-delay: 0s, 4s;
+    transition-timing-function: linear;
+    transition: background-size 2s ease, background-position-x 2s ease;
+    overflow: hidden;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+    color: black;
+    float: left;
+    margin: 0px;
+    text-decoration: none!important;
+}
+
+.logo {
+    float: left;
+    font-size: 50px;
+    position: fixed;
+    margin-left: 2%;
+}
+
+.logo-text {
+    float: left;
+    color: whitesmoke;
+    font-weight: 400;
+    margin-left: 5px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    padding-top: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the search field */
+
+form.example {
+    width: 30%;
+    float: left;
+    margin-right: 5px;
+    border-radius: 20px;
+    padding: 7px;
+    margin-left: 2%;
+    margin-top: 10px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    float: left;
+    width: 75%;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    width: 17%;
+    float: right;
+    padding: 4px;
+    background: red;
+    color: white;
+    font-size: 17px;
+    border: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+form.example button:hover {
+    background: rgb(7, 53, 75);
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#fav {
+    font-size: 40px;
+    margin-left: 50%;
+    margin-top: 15px;
+    color: whitesmoke;
+}
+
+#fav:hover {
+    color: red;
+}
+
+#signout {
+    font-size: 40px;
+    margin-left: 2%;
+    color: whitesmoke;
+}
+
+#signout:hover {
+    color: red;
+}
+
+.header-main {
+    height: 80px!important;
+    background-color: #c3073f;
+    position: relative;
+}
+
+#sidebarmenu {
+    padding: 100px;
+}
+
+.search-box {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.search-btn {
+    color: red;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+.search-box:hover>.search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover>.search-btn {
+    color: whitesmoke;
+    background: red;
+}
+
+.player {
+    position: fixed;
+    z-index: 100;
+    top: 510px;
+    left: 70%;
+}
+
+iframe {
+    resize: both;
+    overflow: auto;
+}

@@ -1,0 +1,115 @@
+.header {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+    color: black;
+    float: left;
+    margin: 10px;
+    text-decoration: none!important;
+}
+
+.logo {
+    float: left;
+    font-size: 50px;
+    position: fixed;
+    margin-left: 2%;
+}
+
+.logo-text {
+    float: left;
+    color: #000;
+    font-weight: 400;
+    margin-left: 5px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    padding-top: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Style the search field */
+
+form.example {
+    width: 35%;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 7px;
+    margin-left: 2%;
+}
+
+form.example input[type=text] {
+    padding: 4px;
+    font-size: 17px;
+    float: left;
+    width: 80%;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    width: 20%;
+    float: right;
+    padding: 4px;
+    background: red;
+    color: white;
+    font-size: 17px;
+    border: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+form.example button:hover {
+    background: rgb(7, 53, 75);
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#fav {
+    font-size: 40px;
+    margin-left: 2%;
+    color: rgb(7, 53, 75);
+}
+
+#fav:hover {
+    color: red;
+}
+
+#signout {
+    font-size: 40px;
+    margin-left: 2%;
+    color: rgb(7, 53, 75);
+}
+
+#signout:hover {
+    color: red;
+}
+
+.header-main {
+    height: 80px!important;
+    background-color: #c3073f;
+}
+
+#sidebarmenu {
+    padding: 100px;
+}

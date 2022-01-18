@@ -1,0 +1,66 @@
+<header>
+    <nav>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <div class="header-main">
+            <div>
+                <div class="logo" style="margin-top:12px;" title="Logo">
+                    <a href="landing">
+                        <img src="../../assets/images/logo.png" style="height: 50px;width: 50px;float:left ;">
+                        <div class="logo-text">ViewTube</div>
+                    </a>
+                </div>
+
+                <div class="header" style="margin-left: 42%; margin-right: 5px;">
+
+                    <div class="search-box">
+                        <input class="search-txt" type="text" placeholder="Type to Search ">
+                        <a class="search-btn " (click)="search()" [(ngModel)]="searchKey ">
+                            <i class=" fa fa-search "></i>
+                        </a>
+                    </div>
+
+                    <div class="account " style="margin-top: 3px; ">
+                        <a href="favorite " title="Favorite List ">
+                            <i class="fa fa-gratipay " aria-hidden="true " id="fav"></i></a>
+                        <a href="register " title="Sign Out">
+                            <i class="fa fa-sign-out " aria-hidden="true " id="signout" (click)="logout() "></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<div class="main ">
+    <div class="categories "><button class=" button button1 " name="categories " (click)="getPopularVideos() ">All</button>
+        <button class="button button1 " *ngFor="let category of categories " (click)="getVideosByCategory(category.id) ">{{category.snippet.title}}</button>
+    </div>
+
+    <div class="player " *ngIf=" isplay ">
+        <iframe id="ytplayer " type="text/html " [src]=" iframeurl " allowfullscree></iframe>
+    </div>
+
+    <ul class=" grid ">
+        <li class="grid-item " *ngFor="let video of videos ">
+            <article>
+                <div class="image ">
+                    <img [src]="video.snippet.thumbnails.high.url ">
+
+                </div>
+                <h2>{{video.snippet.title}}</h2>
+                <p>{{video.snippet.channelTitle}}</p>
+
+                <i class="fa fa-heart float-right " (click)="addFav(video) " id="fa"></i>
+                <i class="fa fa-play float-right " (click)="openVideo(video.id) " id="fa1" *ngIf="!isplay"></i>
+                <i class=" fa fa-stop float-right " (click)="closeVideo(video.id) " id="fa1 " *ngIf="isplay"></i>
+
+            </article>
+        </li>
+
+
+    </ul>
+</div>

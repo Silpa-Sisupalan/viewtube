@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="header-main">
+    <div>
+        <div class="logo" title="Logo">
+            <a href="landing">
+                <img src="../../assets/images/logo.png" style="height: 50px;width: 50px;float:left ;">
+                <div class="logo-text">ViewTube</div>
+            </a>
+        </div>
+
+        <div class="header" style="margin-left: 42%; margin-right: 5px;">
+            <form class="example">
+                <input type="text" placeholder="Search.." name="search" [(ngModel)]="searchKey">
+
+                <button type="submit" name="Searchbox" (click)="search()">
+          <i class="fa fa-search"></i>
+        </button>
+            </form>
+            <div class="account" style="margin-top: 3px;">
+                <a href="favorite" title="Favorite List">
+                    <i class="fa fa-gratipay" aria-hidden="true" id="fav"></i></a>
+                <a href="register" title="Sign Out">
+                    <i class="fa fa-sign-out" aria-hidden="true" id="signout"></i></a>
+            </div>
+
+        </div>
+    </div>
